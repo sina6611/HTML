@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+<h1>this is test of JavaScript</h1>
+    <p id="pr" > This text will change with pressure of button </p>
+    <p  id="p2" > This text will change and shows Date and clock</p>
+    <button style="padding:20px; background-color:burlywood;color:maroon;font-size:120%;" onclick="TextChange()"  >Click hier to change Text</button>
+    <script>
+
+        function TextChange()
+        {
+            document.getElementById("pr").innerHTML = "Hello JavaScript";
+            document.getElementById("p2").style.fontSize = "130%";
+            document.getElementById("p2").style.backgroundColor = "yellow";
+            document.getElementById("p2").style.color = "blue";
+
+        }
+
+
+    </script>
+</body>
+</html>
