@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+</head>
+<body>
+<form>
+    <fieldset style="width:30%;" >
+        <legend>Personalia</legend>
+        <label for="fname"  style="font-size:120%">first name</label><br />
+        <input type="text" id="fname" name="fname" /><br>
+        <label for="lname">last name</label><br>
+        <input type="text" id="lname" name="lname" /><br />
+        <br /><br />
+        <input type="submit" value="Send" />
+    </fieldset>
+</form><br /><br />
+    <form>
+        <input list="browser" name="browsers" />
+       <datalist id="browser">
+           <option value="Internet Explorer"> 
+           <option value="Google Chrome">
+           <option value="Safari">
+           <option value="Mozilla">
+       </datalist>
+        <input type="submit" value="Choose " />
+    </form>
+    <br /><br />
+    <form action="/action_page.php"  
+          oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        0<input type="range" id="a" name="a" value="50" />100
+        <input  type="range" id="b" name="b" value="50"/>
+        =
+        <output name="x" for="a,b" ></output>
+
+    </form><br /><br />
+                 <form autocomplete="off">
+                     <label for="username">Username:</label><br>
+                     <input type="text" id="username" name="username"><br>
+                     <label for="pwd">Password:</label><br>
+                     <input type="password" id="pwd" name="pwd">
+                     <br /><br />
+                     <label for="clr"> Select your favorit color</label>
+                     <input type="color" id="clr" name="cls" /><br /><br />
+                     <input type="submit"  value="Senden"><br /><br />
+                     <label for="birthday">Input your birthday</label>
+                     <input type="date" id="birthday" name="birthday" /><br /><br />
+                     <label for="min">Enter birthday befor 01.01.1980</label>
+                     <input  type="date" id="min" name="max" max="1979-12-31"><br /><br />
+                     <label for="b2"> Enter  date and time of your birthday</label>
+                     <input type="datetime-local" id="b2" name="b2"><br><br />
+                     <label for=" file"> Upload your file here</label>
+                     <input type="file" id="file" name="file" ><br /><br />
+                     <input type="number" id="file" name="file" min="1" max="10" ><br /><br />
+                     <input type="search" name="file" id="file"><br />
+                     <input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="123-45-678" required>
+                     <small>Format:123-45-678</small>
+
+
+
+                 </form>
+</body>
+</html>
