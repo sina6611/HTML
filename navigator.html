@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <style>
+        span {
+            font-family: 'Dancing Script', cursive;
+            border-top: 15px solid #000000;
+            border-bottom:15px solid #ffd800;
+            padding:20px;
+            font-size:200%;
+        }
+    </style>
+
+
+</head>
+<body >
+<button onclick="getposition()" style="width:170px;height:100px;font-size:150%;"> Try it</button><br /><br /><br />
+                            <span
+                               style="background-color:#ff0000;text-align:center">Click to run our services
+                            </span>
+    
+    <p id="demo"></p><br />
+   <script>
+       x=document.getElementById("demo")
+       function getposition() {
+           if (navigator.geolocation) {
+               navigator.geolocation.watchPosition(showPosition, showError);
+               
+           }
+           else {
+               x.innerHTML = "your browser is not supported by navigator ";
+           }
+              
+           
+       }
+       function showPosition(position) {
+           x.innerHTML = "Latitude:" + position.coords.longitude +
+               "<br> Longitude:" + position.coords.longitude;
+       }
+       function showError(error) {
+           switch (error.code) {
+               case error.PERMISSION_DENIED:
+                   x.innerHTML = "Denied"
+                   break;
+               case error.POSITION_UNAVALAIBLE:
+                   x.innerHTML = "Unavalaible"
+                   break;
+               case error.TIMEOUT:
+                   x.innerHTML = "TIMEOUT"
+                   break;
+               case error.UNKNOWN_ERROR:
+                   x.innerHTML = "An unknown erorr"
+                   break;
+
+
+           }
+       }
+   </script>
+</body>
+</html>
